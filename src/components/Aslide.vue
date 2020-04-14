@@ -7,7 +7,7 @@
         class="el-menu-vertical-demo"
         @open="handleOpen"
         @close="handleClose"
-        :collapse="global.isCollapse"
+        :collapse="isCollapse"
         background-color="#545c64"
         text-color="#fff"
         active-text-color="#ffd04b">
@@ -56,8 +56,11 @@ import Global from '@/store/module/global';
 const global = getModule(Global, store);
 // import global from '@/store';
 console.log(global);
-@Component({})
-export default class Aslide extends Vue {
+@Component({
+  name: 'Aslide',
+})
+export default class extends Vue {
+  isCollapse = false
   handleOpen(key: string, keyPath: string[]): void {
     console.log(key, keyPath);
   }

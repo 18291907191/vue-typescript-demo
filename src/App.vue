@@ -19,6 +19,7 @@ export default class App extends Vue {
   text-align: center;
   color: #2c3e50;
   height: 100%;
+  background-color: @bg-black
 }
 
 #nav {
