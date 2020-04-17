@@ -1,8 +1,12 @@
+/**
+ * @description: 全局变量模块
+ * @since 20200416
+ * @author 狗尾草
+ */
 import { VuexModule, Module, Mutation } from 'vuex-module-decorators';
-import store from '@/store';
 
-@Module({ name: 'Global', namespaced: true, stateFactory: true })
-export default class Global extends VuexModule {
+@Module({ name: 'GlobalModule', namespaced: true })
+export default class GlobalModule extends VuexModule {
   public isCollapse = false;
   
   @Mutation

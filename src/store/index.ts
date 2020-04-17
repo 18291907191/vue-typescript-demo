@@ -1,7 +1,9 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import Global from './module/global';
-Vue.use(Vuex)
+import Vue from 'vue';
+import Vuex from 'vuex';
+
+import GlobalModule from './module/global';
+
+Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
@@ -11,6 +13,6 @@ export default new Vuex.Store({
   actions: {
   },
   modules: {
-    Global,
+    GlobalModule,
   }
-})
+});

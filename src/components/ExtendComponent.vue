@@ -12,12 +12,12 @@ export default Vue.extend({
   data() {
     return {
       componentName: '扩展式组件'
-    }
+    };
   },
   mounted(): void {
     console.log('Extend-Component mounted');
   }
-})
+});
 </script>
 
 <style lang="less" scoped>

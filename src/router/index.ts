@@ -1,8 +1,8 @@
-import Vue from 'vue'
-import VueRouter, { RouteConfig } from 'vue-router'
+import Vue from 'vue';
+import VueRouter, { RouteConfig } from 'vue-router';
 import Home from '@/components/Layout.vue';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
   const routes: Array<RouteConfig> = [
   {
@@ -20,10 +20,10 @@ Vue.use(VueRouter)
     name: 'ClassComponent',
     component: () => import(/* webpackChunkName: "about" */ '@/components/ClassComponent.vue')
   }
-]
+];
 
 const router = new VueRouter({
   routes
-})
+});
 
-export default router
+export default router;

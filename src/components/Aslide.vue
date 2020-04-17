@@ -49,24 +49,30 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-// import { GlobalModule } from '@/store/module/global';
 import { getModule } from 'vuex-module-decorators';
 import store from '@/store';
-import Global from '@/store/module/global';
-const global = getModule(Global, store);
-// import global from '@/store';
-console.log(global);
+import GlobalModule from '@/store/module/global';
+const storeGlobalModule = getModule(GlobalModule, store);
+
 @Component({
   name: 'Aslide',
 })
 export default class extends Vue {
-  isCollapse = false
+  public isCollapse = storeGlobalModule.isCollapse
   handleOpen(key: string, keyPath: string[]): void {
     console.log(key, keyPath);
   }
   handleClose(key: string, keyPath: string[]): void {
     console.log(key, keyPath);
-  }  
+  }
+  mounted(): void {
+    console.log(storeGlobalModule);
+    // const global = getModule(GlobalModule, this.$store);
+    // console.log(global)
+    // this.isCollapse = ;
+    // console.log(getModule(getModule(global, this.$store)));
+    // console.log('64',this.$store);
+  }
 }
 </script>
 
