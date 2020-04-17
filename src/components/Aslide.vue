@@ -1,6 +1,6 @@
 <template>
   <div class="aslide">
-    <div class="logo">Logo图标</div>
+    <div class="logo" @click="handleChangeCollapse">Logo图标</div>
     <div class="menu">
       <el-menu
         default-active="2"
@@ -58,20 +58,18 @@ const storeGlobalModule = getModule(GlobalModule, store);
   name: 'Aslide',
 })
 export default class extends Vue {
-  public isCollapse = storeGlobalModule.isCollapse
+
+  get isCollapse() {
+    return storeGlobalModule.isCollapse;
+  }
   handleOpen(key: string, keyPath: string[]): void {
     console.log(key, keyPath);
   }
   handleClose(key: string, keyPath: string[]): void {
     console.log(key, keyPath);
   }
-  mounted(): void {
-    console.log(storeGlobalModule);
-    // const global = getModule(GlobalModule, this.$store);
-    // console.log(global)
-    // this.isCollapse = ;
-    // console.log(getModule(getModule(global, this.$store)));
-    // console.log('64',this.$store);
+  handleChangeCollapse(): void {
+    storeGlobalModule.SET_COLLAPSE();
   }
 }
 </script>
