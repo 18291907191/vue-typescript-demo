@@ -39,8 +39,8 @@ export default class Home extends Vue {
 </script>
 
 <style lang="less" scoped>
-@bg-black: #000000;
-@font-black: #333333;
+// @bg-black: #000000;
+// @font-black: #333333;
 .wraper {
   height: 100%;
 }

@@ -2,29 +2,24 @@
   {
     "name": "数据总览",
     "path": "/index",
-    "icon": "el-icon-c-scale-to-original",
-    "index": "1"
+    "icon": "el-icon-c-scale-to-original"
   },
   {
     "name": "文章",
     "path": "article",
     "icon": "el-icon-document",
-    "index": "2",
     "itemGroup": [
       {
         "name": "文章发布",
-        "path": "/article/publish",
-        "index": "2-1"
+        "path": "/article/publish"
       },
       {
         "name": "文章列表",
-        "path": "/article/list",
-        "index": "2-2"
+        "path": "/article/list"
       },
       {
         "name": "草稿箱",
-        "path": "/article/draft",
-        "index": "2-3"
+        "path": "/article/draft"
       }
     ]
   },
@@ -32,12 +27,10 @@
     "name": "标签",
     "path": "tag",
     "icon": "el-icon-collection-tag",
-    "index": "3",
     "itemGroup": [
       {
         "name": "标签列表",
-        "path": "/tag/list",
-        "index": "3-1"
+        "path": "/tag/list"
       }
     ]
   }
